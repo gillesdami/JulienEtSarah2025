@@ -1,9 +1,70 @@
-<html>
-    <head>
-        <title>Home</title>
-    </head>
-    <body>
-        <h1>Home</h1>
-        <p>Welcome to the home page.</p>
-    </body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariage de Sarah et Julien</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Love+Light&family=Lovers+Quarrel&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Love+Light&family=Lovers+Quarrel&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#planning">Planning</a>
+            <a href="#theme">Thème</a>
+            <a href="#rsvp">RSVP</a>
+        </nav>
+    </header>
+
+    <section id="accueil">
+        <div class="hero">
+            <h1>Mariage de Sarah et Julien</h1>
+        </div>
+    </section>
+
+    <section id="planning">
+        <div class="planning">
+            <div class="column">
+                <h2>Date et Heure</h2>
+                <p>Date: [Date]<br>Heure: [Heure]<br>Description: [Description]</p>
+            </div>
+            <div class="column">
+                <h2>Plan</h2>
+                <iframe src="[Google Maps Embed Link]" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="theme">
+        <h2>Thème</h2>
+        <h3>Conte de fée</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="photos">
+            <!-- Add photos here -->
+        </div>
+    </section>
+
+    <section id="rsvp">
+        <h2>RSVP</h2>
+        <p>Veuillez confirmer votre présence au plus tôt !</p>
+        <form>
+            <label for="presence">Présence:</label>
+            <select id="presence" name="presence">
+                <option value="seront présents">Seront présents</option>
+                <option value="seront absents">Seront absents</option>
+            </select>
+            <label for="noms">Noms:</label>
+            <textarea id="noms" name="noms"></textarea>
+            <a id="mailto" type="button">Envoyer</a>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
 </html>

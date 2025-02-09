@@ -1,0 +1,140 @@
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    position: fixed;
+    width: 100%;
+    text-align: right;
+}
+
+header nav {
+    display: inline-block;
+    width: 100%;
+    margin: 1rem;
+}
+
+header nav a {
+    color: goldenrod;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 2%;
+    border-bottom: 2px solid goldenrod;
+    line-height: 1.5rem;
+}
+
+header nav a:hover {
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+.hero {
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8); /* Add linear gradient box-shadow */
+    background-image: url('assets/images/accueil.jfif'); /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-family: "Lovers Quarrel", serif;
+}
+
+.hero h1 {
+    font-size: 6rem;
+    margin-top: 15rem;
+}
+
+.planning {
+    font-family: "Funnel Sans", serif;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8);
+    background: linear-gradient(#000, #1d2046);
+    color: white;
+    display: flex;
+    height: 100vh;
+}
+
+.column {
+    width: 50%;
+    padding: 2rem;
+}
+
+#theme {
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #1d2046;
+    color: white;
+}
+
+#theme h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#theme h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photos img {
+    width: 200px;
+    height: auto;
+    margin: 1rem;
+    transform: rotate(3deg); /* Slight rotation */
+}
+
+#rsvp {
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #1d2046;
+    color: white;
+}
+
+#rsvp form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+}
+
+#rsvp label {
+    margin-bottom: 0.5rem;
+}
+
+#rsvp select, #rsvp textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+#rsvp a {
+    padding: 0.5rem 1rem;
+    background-color: #e673cd;
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
