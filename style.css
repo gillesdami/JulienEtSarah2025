@@ -117,7 +117,7 @@ header nav a:hover {
 
 .photos img {
     position: absolute;
-    width: 20vw;
+    width: min(20vw, 20vh);
     height: auto;
 }
 
@@ -135,7 +135,7 @@ header nav a:hover {
 
 .photos img:nth-child(3) {
     transform: rotate(-6deg);
-    width: 30vw;
+    width: min(30vw, 30vh);
     left: 10vw;
     top: 75vh;
 }
@@ -154,7 +154,7 @@ header nav a:hover {
 
 .photos img:nth-child(6) {
     transform: rotate(6deg);
-    width: 30vw;
+    width: min(30vw, 30vh);
     left: 60vw;
     top: 75vh;
 }
