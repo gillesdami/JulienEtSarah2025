@@ -73,7 +73,6 @@ header nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: 100vh;
     background-color: #1d2046;
     color: white;
@@ -82,6 +81,7 @@ header nav a:hover {
 #theme h2 {
     text-align: center;
     margin-bottom: 1rem;
+    margin-top: 20vh;
 }
 
 #theme h3 {
@@ -89,17 +89,51 @@ header nav a:hover {
     margin-bottom: 2rem;
 }
 
-.photos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+#theme p {
+    text-align: center;
+    width: 55%;
 }
 
 .photos img {
-    width: 200px;
+    position: absolute;
+    width: 20vw;
     height: auto;
-    margin: 1rem;
-    transform: rotate(3deg); /* Slight rotation */
+}
+
+.photos img:nth-child(1) {
+    transform: rotate(3deg);
+    left: 0vw;
+    top: 220vh;
+}
+
+.photos img:nth-child(2) {
+    transform: rotate(-3deg);
+    left: 0vw;
+    top: 240vh;
+}
+
+.photos img:nth-child(3) {
+    transform: rotate(6deg);
+    left: 0vw;
+    top: 260vh;
+}
+
+.photos img:nth-child(4) {
+    transform: rotate(3deg);
+    left: 80vw;
+    top: 220vh;
+}
+
+.photos img:nth-child(5) {
+    transform: rotate(-3deg);
+    left: 80vw;
+    top: 240vh;
+}
+
+.photos img:nth-child(6) {
+    transform: rotate(6deg);
+    left: 80vw;
+    top: 260vh;
 }
 
 #rsvp {
