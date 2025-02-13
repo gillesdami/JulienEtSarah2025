@@ -7,19 +7,12 @@ body {
     margin: 0;
 }
 
-header {
-    display: flex;
-    align-items: end;
-    justify-content: end;
+header nav {
     position: fixed;
+    top: 1rem;
+    right: 1rem;
     width: 100%;
     text-align: right;
-}
-
-header nav {
-    display: inline-block;
-    width: 100%;
-    margin: 1rem;
 }
 
 header nav a {
@@ -65,7 +58,16 @@ header nav a:hover {
 
 .column {
     width: 50%;
-    padding: 2rem;
+    padding: 1rem;
+    padding-top: 3rem;
+}
+
+.column:last-child {
+    padding-left: 0;
+}
+
+.column p {
+    height: 40vh;
 }
 
 #theme {
@@ -87,11 +89,30 @@ header nav a:hover {
 #theme h3 {
     text-align: center;
     margin-bottom: 2rem;
+    font-size: large;
+    font-size: 80px;
+    margin: 0;
+    font-family: "Lovers Quarrel", serif;
+    color: gold;
+}
+
+#theme h3 img {
+    position: absolute;
+    transform: scale(0.5) translate(-109%, -96%);
 }
 
 #theme p {
     text-align: center;
     width: 55%;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.photos {
+    position: absolute;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
 }
 
 .photos img {
@@ -103,37 +124,39 @@ header nav a:hover {
 .photos img:nth-child(1) {
     transform: rotate(3deg);
     left: 0vw;
-    top: 220vh;
+    top: 20vh;
 }
 
 .photos img:nth-child(2) {
     transform: rotate(-3deg);
     left: 0vw;
-    top: 240vh;
+    top: 40vh;
 }
 
 .photos img:nth-child(3) {
-    transform: rotate(6deg);
-    left: 0vw;
-    top: 260vh;
+    transform: rotate(-6deg);
+    width: 30vw;
+    left: 10vw;
+    top: 75vh;
 }
 
 .photos img:nth-child(4) {
     transform: rotate(3deg);
     left: 80vw;
-    top: 220vh;
+    top: 20vh;
 }
 
 .photos img:nth-child(5) {
     transform: rotate(-3deg);
     left: 80vw;
-    top: 240vh;
+    top: 40vh;
 }
 
 .photos img:nth-child(6) {
     transform: rotate(6deg);
-    left: 80vw;
-    top: 260vh;
+    width: 30vw;
+    left: 60vw;
+    top: 75vh;
 }
 
 #rsvp {
