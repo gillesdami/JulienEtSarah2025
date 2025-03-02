@@ -5,81 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mariage de Sarah et Julien</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Love+Light&family=Lovers+Quarrel&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Love+Light&family=Lovers+Quarrel&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
-            <a href="#accueil">Accueil</a>
-            <a href="#planning">Planning</a>
-            <a href="#theme">Thème</a>
-            <a href="#rsvp">RSVP</a>
+            <a href="#accueil" class="navl">Accueil</a>
+            <a href="#planning" class="navl">Planning</a>
+            <a href="#theme" class="navl">Thème</a>
+            <div class="spacer"></div>
+            <a href="#rsvp" class="navl"><button>RSVP</button></a>
         </nav>
     </header>
 
-    <section id="accueil">
-        <div class="hero">
-            <h1>Mariage de Sarah et Julien</h1>
-        </div>
-    </section>
+    <article>
+        <section id="accueil">
+            <div class="hero">
+                <h1>Sarah et Julien</h1>
+            </div>
+        </section>
 
-    <section id="planning">
-        <div class="planning">
-            <div class="column">
-                <h2>Programme</h2>
+        <section id="planning">
+            <div class="planning">
+                <h2>Planning</h2>
                 <p>
                     VENDREDI 0 Jan<br>
                     10h45: Rendez vous a la mairie<br>
                     Description: [Description]
                 </p>
+                <iframe style="height:20vh;width:80vw;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Th%C3%A9%C3%A2tre%20Municipal%20Gabrielle%20Robinne&key=AIzaSyCwPyMK4O6XVzL5VzloqhL0CjUXX4_QK-o"></iframe>
                 <p>
                     SAMEDI 0 Jan<br>
                     10h45: Quidditch<br>
                     Description: [Description]
                 </p>
+                <iframe style="height:20vh;width:80vw;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=salle+des+fetes+montlucon&key=AIzaSyCwPyMK4O6XVzL5VzloqhL0CjUXX4_QK-o"></iframe>
             </div>
-            <div class="column">
-                <h2>Plan</h2>
-                <iframe style="height:40vh;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=mairie+de+montlucon&key=AIzaSyCwPyMK4O6XVzL5VzloqhL0CjUXX4_QK-o"></iframe>
-                <iframe style="height:40vh;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=salle+des+fetes+montlucon&key=AIzaSyCwPyMK4O6XVzL5VzloqhL0CjUXX4_QK-o"></iframe>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="theme">
-        <div class="photos">
-            <img src="assets/images/theme1.jpg"/>
-            <img src="assets/images/theme2.jpg"/>
-            <img src="assets/images/theme3.jpg"/>
-            <img src="assets/images/theme4.jpg"/>
-            <img src="assets/images/theme5.jpg"/>
-            <img src="assets/images/theme6.jpg"/>
-        </div>
-        <h2>Thème</h2>
-        <h3>Conte de fée<img src="assets/images/butterfly-insect.gif"/></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </section>
+        <section id="theme">
+            <section class="subtheme">
+                <div class="text-col">
+                    <h2><i>T</i>hème</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="carousel">
+                    <div class="carousel-nav">
+                        <button class="prev">❮</button>
+                        <button class="next">❯</button>
+                    </div>
+                    <div class="slide-container">
+                        <div class="slide"><img src="assets/images/theme1.jpg"></div>
+                        <div class="slide"><img src="assets/images/theme2.jpg"></div>
+                        <div class="slide"><img src="assets/images/theme3.jpg"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="subtheme">
+                <div class="carousel">
+                    <div class="carousel-nav">
+                        <button class="prev">❮</button>
+                        <button class="next">❯</button>
+                    </div>
+                    <div class="slide-container">
+                        <div class="slide"><img src="assets/images/theme1.jpg"></div>
+                        <div class="slide"><img src="assets/images/theme2.jpg"></div>
+                        <div class="slide"><img src="assets/images/theme3.jpg"></div>
+                    </div>
+                </div>
+                <div class="text-col">
+                    <h2><i>T</i>hème</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </section>
+        </section>
 
-    <section id="rsvp">
-        <h2>RSVP</h2>
-        <p>Veuillez confirmer votre présence au plus tôt !</p>
-        <form>
-            <label for="presence">Présence:</label>
-            <select id="presence" name="presence">
-                <option value="seront présents">Seront présents</option>
-                <option value="seront absents">Seront absents</option>
-            </select>
-            <label for="noms">Noms:</label>
-            <textarea id="noms" name="noms"></textarea>
-            <a id="mailto" type="button">Envoyer</a>
-        </form>
-    </section>
-
+        <section id="rsvp">
+            <h2>RSVP</h2>
+            <p>Veuillez confirmer votre présence au plus tôt !</p>
+            <form>
+                <label for="presence">Présence:</label>
+                <select id="presence" name="presence">
+                    <option value="seront présents">Seront présents</option>
+                    <option value="seront absents">Seront absents</option>
+                </select>
+                <label for="noms">Noms:</label>
+                <textarea id="noms" name="noms"></textarea>
+                <a id="mailto" type="button">Envoyer</a>
+            </form>
+        </section>
+    </article>
     <script src="script.js"></script>
 </body>
 </html>
