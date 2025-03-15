@@ -89,7 +89,7 @@ header nav a.active {
 }
 
 .hero {
-    background-image: url('assets/images/accueil.jfif');
+    background-image: url('assets/images/image.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -98,6 +98,7 @@ header nav a.active {
     text-align: center;
     font-family: "Didot eText W01 Italic";
     color: white;
+    text-shadow: 2px 5px 5px black;
 }
 
 .hero h1 {
