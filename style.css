@@ -19,6 +19,7 @@ article {
     scroll-snap-type: y mandatory;
     height: 100vh;
     overflow: scroll;
+    overflow-x: hidden;
 }
 
 section {
@@ -108,7 +109,7 @@ header nav a.active {
     font-weight: 100;
 }
 
-.planning {
+#planning {
     font-size: xx-large;
     display: flex;
     flex-direction: column;
@@ -116,15 +117,39 @@ header nav a.active {
     height: 100vh;
     padding-left: 10vw;
     padding-right: 10vw;
+    padding-bottom: 10px;
 }
 
-.planning h2 {
-    margin-top: calc(1rem + 6%);
+#planning h2 {
+    margin-top: calc(3rem + 4%);
     margin-bottom: 0;
 }
 
+#planning h6 {
+    margin-bottom: 0;
+}
+
+.planning {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+ul {
+    margin: 0;
+}
+
+li {
+    font-size: 1.1rem;
+}
+
+.planning-col {
+    flex: 1;
+}
+
 .planning p {
-    font-size: medium;
+    font-size: 1.1rem;
     margin: 0;
 }
 
@@ -246,6 +271,7 @@ header nav a.active {
 @media only screen and (max-width: 600px) {
     #theme {
         height: auto;
+        gap: 0;
     }
 
     .subtheme > .text-col h2 {
@@ -256,10 +282,39 @@ header nav a.active {
         display: flex;
         flex-direction: column;
         align-items: end;
+        height: 100vh;
+        justify-content: center;
     }
 
     .subtheme:nth-child(2n) {
         flex-direction: column-reverse;
+    }
+
+    #planning {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-top: 3rem;
+        height: calc(100vh - 3rem);
+    }
+
+    #planning h2 {
+        display: none;
+    }
+
+    #planning h6 {
+        margin-top: 0.25rem;
+    }
+
+    li {
+        font-size: 1rem;
+    }
+
+    .planning p {
+        font-size: 1rem;
+    }
+
+    .planning-col {
+        align-self: baseline;
     }
 }
 
@@ -298,4 +353,9 @@ header nav a.active {
     font-weight: 600;
     border: none;
     cursor: pointer;
+}
+
+.goldenrod {
+    color: goldenrod;
+    font-weight: bold;
 }
