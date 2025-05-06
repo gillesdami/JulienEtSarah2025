@@ -92,6 +92,7 @@ header nav a.active {
     background-image: url('assets/images/image.png');
     background-size: cover;
     background-position: center;
+    background-position-y: top;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -100,6 +101,17 @@ header nav a.active {
     color: white;
     text-shadow: 2px 5px 5px black;
 }
+
+@media (min-aspect-ratio: 3/2) {
+    .hero {
+        background-position-y: 12%;
+    }
+
+    .hero h1 {
+        margin-top: 10rem;
+    }
+}
+
 
 .hero h1 {
     margin-top: 15rem;
@@ -114,7 +126,6 @@ header nav a.active {
     font-size: xx-large;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     height: 100vh;
     padding-left: 10vw;
     padding-right: 10vw;
@@ -128,12 +139,12 @@ header nav a.active {
 
 #planning h6 {
     margin-bottom: 0;
+    margin-top: 10px;
 }
 
 .planning {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
     gap: 20px;
 }
 
@@ -159,20 +170,17 @@ li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
     height: 100vh;
     padding-left: 10vw;
     padding-right: 10vw;
-}
-
-#theme .subtheme:first-child {
-    margin-top: calc(1rem + 6%);
 }
 
 #theme div h2 {
     font-style: italic;
     font-size: 35px;
     font-weight: 400;
+    margin-top: calc(3rem + 4%);
+    margin-bottom: 0;
 }
 
 #theme div h2 i {
@@ -183,9 +191,19 @@ li {
     margin: 0;
 }
 
+.carousels {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
 .carousel {
     flex-direction: column;
     overflow: hidden;
+    width: 50%;
 }
 
 .carousel-nav {
@@ -236,6 +254,7 @@ li {
     height: 100%;
     user-select: none;
     -webkit-user-drag: none;
+    aspect-ratio: 1;
 }
 
 @keyframes tonext {
@@ -254,68 +273,51 @@ li {
 }
 
 @media only screen and (min-width: 600px) {
-    .subtheme {
-        display: flex;
-        gap: 20px;
-        align-items: end;
-    }
-
-    .subtheme > .text-col {
-        width: 50%;
-    }
-
     .carousel {
         width: min(50%, 45vh);
+    }
+
+    .detail-mobile {
+        display: none;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    #theme {
-        height: auto;
-        gap: 0;
-    }
-
-    .subtheme > .text-col h2 {
-        margin-bottom: 0;
-    }
-
-    .subtheme {
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        height: 100vh;
-        justify-content: center;
-    }
-
-    .subtheme:nth-child(2n) {
-        flex-direction: column-reverse;
+    .detail-pc {
+        display: none;
     }
 
     #planning {
         padding-left: 5vw;
         padding-right: 5vw;
-        padding-top: 3rem;
-        height: calc(100vh - 3rem);
+        padding-bottom: 20px;
+        overflow-y: scroll;
     }
 
     #planning h2 {
         display: none;
     }
 
-    #planning h6 {
-        margin-top: 0.25rem;
-    }
-
     li {
         font-size: 1rem;
+    }
+
+    .planning {
+        flex-direction: column;
+        gap: 0;
     }
 
     .planning p {
         font-size: 1rem;
     }
 
+    .planning-col:first-child {
+        padding-top: 4rem;
+    }
+
     .planning-col {
         align-self: baseline;
+        height: calc(100vh - 4rem);
     }
 }
 
@@ -359,4 +361,34 @@ li {
 .goldenrod {
     color: goldenrod;
     font-weight: bold;
+}
+
+/* Google-style button */
+.google-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 24px;
+    font-family: 'Google Sans', Roboto, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    text-transform: none;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 2px 0 rgba(66, 133, 244, 0.3), 0 1px 3px 1px rgba(66, 133, 244, 0.15);
+    text-decoration: none;
+}
+
+.google-button:hover {
+    background-color: #3367D6;
+    box-shadow: 0 1px 3px 0 rgba(66, 133, 244, 0.3), 0 4px 8px 3px rgba(66, 133, 244, 0.15);
+}
+
+.google-button:active {
+    background-color: #2B56B1;
 }
