@@ -1,0 +1,4 @@
+recurring:
+  # directories that are not overwritten or removed by the next deployment
+  excludes:
+    - assets

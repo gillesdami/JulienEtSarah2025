@@ -89,7 +89,7 @@ header nav a.active {
 }
 
 .hero {
-    background-image: url('assets/images/image.png');
+    background-image: url('https://raw.githubusercontent.com/gillesdami/JulienEtSarah2025/refs/heads/master/assets/images/image.png');
     background-size: cover;
     background-position: center;
     background-position-y: top;
