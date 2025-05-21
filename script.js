@@ -48,8 +48,8 @@ for (const carrousel of carousels) {
         const slides = carrousel.getElementsByClassName('slide');
         let currentSlide = 0;
 
-        const nextButton = carrousel.getElementsByClassName('next')[0];
-        const prevButton = carrousel.getElementsByClassName('prev')[0];
+        const nextButton = document.getElementsByClassName('next')[0];
+        const prevButton = document.getElementsByClassName('prev')[0];
 
         const updateSlide = (delta) => {
             currentSlide = mod(currentSlide + delta, slides.length);
@@ -64,7 +64,7 @@ for (const carrousel of carousels) {
             updateSlide(-1);
         });
 
-        const autoplay = () => setInterval(() => updateSlide(1), 4000);
+        const autoplay = () => setInterval(() => updateSlide(1), 3000);
         let interval = autoplay();
 
         carrousel.addEventListener(
