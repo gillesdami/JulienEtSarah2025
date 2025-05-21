@@ -182,7 +182,6 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: 100vh;
     padding-left: 10vw;
     padding-right: 10vw;
@@ -314,11 +313,15 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     min-height: 100vh;
     padding-left: 10vw;
     padding-right: 10vw;
     font-size: large;
+    padding-bottom: 200px;
+}
+
+#menu .menus {
+    gap: 20px;
 }
 
 #menu .menu, #menu .menus {
@@ -353,11 +356,26 @@ li {
 
 #menu img {
     margin-bottom: 10px;
+    width: 70px;
+}
+
+.pc-only {
+    display: none;
+}
+
+@media only screen and (min-width: 1200px) {
+    #menu .menus {
+        flex-direction: row;
+    }
+
+    .pc-only {
+    display: initial;
+    }
 }
 
 @media only screen and (min-width: 600px) {
-    #menu .menus {
-        flex-direction: row;
+    .pc-only {
+    display: initial;
     }
 }
 
