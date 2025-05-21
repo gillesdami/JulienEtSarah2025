@@ -7,7 +7,7 @@ function highlightNavElement(element) {
     });
     element.classList.add('active');
 }
-
+highlightNavElement(navlElements[0]);
 
 navlElements.forEach(element => {
     element.addEventListener('click', function() {
@@ -17,22 +17,20 @@ navlElements.forEach(element => {
 
 const navElement = document.getElementsByTagName('nav')[0];
 const articleElement = document.getElementsByTagName('article')[0];
+const sectionElements = document.getElementsByTagName('section');
 
 articleElement.addEventListener('scroll', function() {
     if (articleElement.scrollTop >= window.innerHeight) {
         navElement.classList.add('shadowbg');
-
-        if (articleElement.scrollTop >= window.innerHeight * 3) {
-            highlightNavElement(navlElements[3]);
-        } else if (articleElement.scrollTop >= window.innerHeight * 2) {
-            highlightNavElement(navlElements[2]);
-        } else {
-            highlightNavElement(navlElements[1]);
-        }
-
     } else {
         navElement.classList.remove('shadowbg');
-        highlightNavElement(navlElements[0]);
+    }
+
+    for (let i = 0; i < sectionElements.length; i++) {
+        const section = sectionElements[i];
+        if (articleElement.scrollTop >= section.offsetTop && articleElement.scrollTop < section.offsetTop + section.offsetHeight) {
+            highlightNavElement(navlElements[i]);
+        }
     }
 });
 

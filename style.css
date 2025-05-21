@@ -126,7 +126,6 @@ header nav a.active {
     font-size: xx-large;
     display: flex;
     flex-direction: column;
-    height: 100vh;
     padding-left: 10vw;
     padding-right: 10vw;
     padding-bottom: 10px;
@@ -147,6 +146,7 @@ header nav a.active {
 #planning h5 {
     margin-bottom: 10px;
     margin-top: 0;
+    text-align: center;
 }
 
 #planning iframe {
@@ -156,8 +156,9 @@ header nav a.active {
 
 .planning {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
 }
 
 ul {
@@ -171,11 +172,18 @@ li {
 
 .planning-col {
     flex: 1;
+    align-items: center;
+    width: min(100%, 600px);
+}
+
+.planning-col:first-child h5 {
+    margin-top: 0 !important;
 }
 
 .planning p {
     font-size: 1.1rem;
     margin: 0;
+    text-align: center;
 }
 
 #theme {
@@ -275,6 +283,14 @@ li {
     }
 }
 
+#planning .spacer {
+    height: 1px;
+    width: 60%;
+    margin: 30px;
+    background-color: black;
+    justify-self: center;
+}
+
 @media only screen and (max-width: 600px) {
     #planning {
         padding-left: 5vw;
@@ -298,14 +314,6 @@ li {
 
     .planning p {
         font-size: 1rem;
-    }
-
-    .planning-col:first-child h5 {
-        margin-top: 0 !important;
-    }
-
-    .planning-col {
-        align-self: baseline;
     }
 }
 
@@ -384,9 +392,12 @@ li {
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    padding-left: 10vw;
-    padding-right: 10vw;
     font-size: large;
+}
+
+#rsvp p {
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
 #rsvp h2 {
@@ -396,6 +407,8 @@ li {
     font-weight: 400;
     margin-top: calc(3rem + 4%);
     margin-bottom: 0;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 #rsvp h2 i {
@@ -446,4 +459,21 @@ li {
 
 .google-button:active {
     background-color: #2B56B1;
+}
+
+.footer {
+    margin-top: auto;
+    background-color: rgba(17, 17, 17, 0.8);
+    color: white;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    width: 80vw;;
+}
+
+@media only screen and (max-width: 600px) {
+    #rsvp .footer {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        width: 90vw;
+    }
 }
